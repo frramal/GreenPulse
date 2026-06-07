@@ -3,3 +3,5 @@ feedparser
 openai
 psycopg2-binary
 SQLAlchemy
+pyvis
+networkx
