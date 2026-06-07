@@ -1,0 +1,15 @@
+[theme]
+# Główny kolor akcentów (przyciski aktywne, suwaki) - Świeża mięta
+primaryColor = "#69f0ae"
+
+# Kolor tła głównej aplikacji - Czysta głęboka czerń
+backgroundColor = "#000000"
+
+# Kolor tła panelu bocznego (Sidebar) - Bardzo ciemny grafit
+secondaryBackgroundColor = "#111111"
+
+# Główny kolor tekstu - Czysta biel
+textColor = "#ffffff"
+
+# Czcionka - nowoczesna i bezszeryfowa
+font = "sans serif"
