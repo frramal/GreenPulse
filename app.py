@@ -73,7 +73,17 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 2. Inicjalizacja połączeń (Baza danych i LLM)
-conn = st.connection("postgresql", type="sql")
+conn = st.connection(
+    "postgresql", 
+    type="sql",
+    kwargs={
+        "pool_pre_ping": True,  # Automatyczne odnawianie zerwanych połączeń z Neon
+        "pool_recycle": 300,    # Resetowanie połączenia co 5 minut
+        "connect_args": {
+            "sslmode": "require" # Wymuszenie bezpiecznego tunelu SSL
+        }
+    }
+)
 client = OpenAI(
     base_url="https://api.groq.com/openai/v1", 
     api_key=st.secrets["GROQ_API_KEY"]
